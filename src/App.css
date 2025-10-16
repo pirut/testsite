@@ -1,0 +1,242 @@
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+/* Light Theme */
+.App.light {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.App.light .App-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.App.light .feature-section,
+.App.light .info-section {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+}
+
+/* Dark Theme */
+.App.dark {
+    background-color: #1a1a1a;
+    color: #e9ecef;
+}
+
+.App.dark .App-header {
+    background-color: #2d2d2d;
+    border-bottom: 1px solid #404040;
+}
+
+.App.dark .feature-section,
+.App.dark .info-section {
+    background-color: #2d2d2d;
+    border: 1px solid #404040;
+}
+
+.App-header {
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.App-header h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.App-main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.feature-section,
+.info-section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-section h2,
+.info-section h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.theme-toggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.theme-toggle:hover {
+    background-color: #0056b3;
+}
+
+.welcome-message {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 6px;
+    border-left: 4px solid #007bff;
+}
+
+.welcome-message p {
+    margin: 0.5rem 0;
+}
+
+.counter {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(0, 123, 255, 0.05);
+    border-radius: 8px;
+    border: 2px solid rgba(0, 123, 255, 0.2);
+}
+
+.counter h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.counter-display {
+    margin: 2rem 0;
+}
+
+.count-number {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #007bff;
+    display: inline-block;
+    min-width: 120px;
+    padding: 1rem;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 8px;
+    border: 2px solid rgba(0, 123, 255, 0.3);
+}
+
+.counter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.counter-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+.counter-btn.increment {
+    background-color: #28a745;
+    color: white;
+}
+
+.counter-btn.increment:hover {
+    background-color: #218838;
+}
+
+.counter-btn.decrement {
+    background-color: #dc3545;
+    color: white;
+}
+
+.counter-btn.decrement:hover {
+    background-color: #c82333;
+}
+
+.counter-btn.reset {
+    background-color: #6c757d;
+    color: white;
+}
+
+.counter-btn.reset:hover {
+    background-color: #5a6268;
+}
+
+.counter-description {
+    margin-top: 2rem;
+    font-style: italic;
+    color: #6c757d;
+}
+
+.info-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-section li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.App.dark .info-section li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.App-footer {
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.App.dark .App-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.App-footer p {
+    margin: 0;
+    color: #6c757d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .App-header h1 {
+        font-size: 2rem;
+    }
+
+    .App-main {
+        padding: 1rem;
+    }
+
+    .feature-section,
+    .info-section {
+        padding: 1.5rem;
+    }
+
+    .counter-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .counter-btn {
+        width: 200px;
+    }
+
+    .count-number {
+        font-size: 3rem;
+    }
+}
